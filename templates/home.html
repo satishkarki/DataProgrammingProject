@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.Rating }}</a>
+              <small class="text-muted">{{ post.Year }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.movie }}</a></h2>
+            <p class="article-content">{{ "Genre:" }}</p>
+            <p class="article-content">{{ post.Genre }}</p>
+            <p class="article-content">{{ "Run Time in minutes:" }}</p>
+            <p class="article-content">{{ post.Runtime }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
